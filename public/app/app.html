@@ -1,0 +1,30 @@
+<div class="row">
+	<h1>Facebook információk lekérése</h1>
+</div>
+
+<div class="row">
+	<div class="col-xs-2">
+		<button class="form-control btn btn-default" ng-click="login()" ng-if="hidden"><span class="glyphicon glyphicon-thumbs-up"></span> Login with Facebook</button>
+	</div>
+</div>
+
+<div ng-hide="hidden">
+	<div class="row">
+		<h2>{{user_name}}</h2>
+		<img src="{{user_photo}}" />
+	</div>
+	
+	<div class="row">
+		<h3>Elmúlt {{days}} nap postjai:</h3>
+		<ul>
+			<li ng-repeat="post in posts">{{post}}</li>
+		</ul>
+	</div>
+	
+	<div class="row">
+		<h3>Elmúlt {{days}} nap kedvelései:</h3>
+		<ul>
+			<li ng-repeat="like in likes">{{like}}</li>
+		</ul>
+	</div>
+</div>
